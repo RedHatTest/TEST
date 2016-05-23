@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:drools="http://www.jboss.org/drools" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" drools:packageName="org.jbpm" drools:version="1.0" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="10.0.0-SNAPSHOT" expressionLanguage="http://www.w3.org/TR/XPath" id="_Scw4IB8_EeaPWuMkDzotbg" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <itemDefinition id="_validItem" isCollection="false" itemKind="Information" structureRef="Boolean"/>
+   <itemDefinition id="_scoreItem" isCollection="false" itemKind="Information" structureRef="Integer"/>
+   <itemDefinition id="_uE_DQR89EeaPWuMkDzotbgType" isCollection="false" itemKind="Information"/>
+   <itemDefinition id="__493D9D99-3130-4AAC-9F59-CE84F01A454F_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__17E99B6D-81EE-445F-8D92-C7D908663806_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__A56E61C4-2211-461D-A6BA-F4F3CB03528E_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <message id="_uE_DQR89EeaPWuMkDzotbg" itemRef="_uE_DQR89EeaPWuMkDzotbgType"/>
+   <process drools:packageName="org.jbpm" drools:version="1.0" id="sid-7da7689f-7b9a-4816-af4d-c1cdcd421d5b" isClosed="false" isExecutable="false" name="Credit" processType="None">
+      <extensionElements>
+         <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="486ff069015c4e388ce4630749eaa296"/>
+      </extensionElements>
+      <property id="valid" itemSubjectRef="_validItem"/>
+      <property id="score" itemSubjectRef="_scoreItem"/>
+      <startEvent color:background-color="#9acd32" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_1260AF57-D8D4-4CCD-9F61-D75DD5D23EFB" isInterrupting="true" name="Application Received">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Application
+Received</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <outgoing>_36BB1341-C966-4497-9999-8D6C8E85E917</outgoing>
+         <messageEventDefinition drools:msgref="_uE_DQR89EeaPWuMkDzotbg" id="sid-d4ae5e8a-8975-45ee-a160-c6ebf49064d8"/>
+      </startEvent>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_493D9D99-3130-4AAC-9F59-CE84F01A454F" implementation="##unspecified" isForCompensation="false" name="Enter Credit Card Application" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Enter
+Credit Card Application</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_12DCFC26-1FEF-4EC6-89AE-69849B868542</incoming>
+         <outgoing>_5A6638DF-EDCC-4333-9BFC-8673345980CB</outgoing>
+         <ioSpecification id="sid-943f5588-4193-4614-ae56-908ec540b191">
+            <dataInput id="_493D9D99-3130-4AAC-9F59-CE84F01A454F_SkippableInputX" isCollection="false" itemSubjectRef="__493D9D99-3130-4AAC-9F59-CE84F01A454F_SkippableInputXItem" name="Skippable"/>
+            <inputSet id="_Scw4Ix8_EeaPWuMkDzotbg">
+               <dataInputRefs>_493D9D99-3130-4AAC-9F59-CE84F01A454F_SkippableInputX</dataInputRefs>
+               <outputSetRefs>sid-946be898-6eda-448c-a481-9cb7b5692289</outputSetRefs>
+            </inputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_Scw4JR8_EeaPWuMkDzotbg">
+            <targetRef>_493D9D99-3130-4AAC-9F59-CE84F01A454F_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_493D9D99-3130-4AAC-9F59-CE84F01A454F_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+      </userTask>
+      <scriptTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:selectable="true" id="_39635069-B383-44D2-B63F-C03F7DBBBAC9" isForCompensation="false" name="Validate Data" scriptFormat="http://www.java.com/java" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Validate Data</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_5A6638DF-EDCC-4333-9BFC-8673345980CB</incoming>
+         <outgoing>_3CE3F3E2-15B0-4DC7-8C66-7409E809ECF7</outgoing>
+      </scriptTask>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" drools:dg="" drools:selectable="true" gatewayDirection="Diverging" id="_967C1522-744C-400A-A998-9CA2386DAB02" name="Data Valid">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Data Valid</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_3CE3F3E2-15B0-4DC7-8C66-7409E809ECF7</incoming>
+         <outgoing>_7353FF98-08ED-493A-AEC9-1A13FB921FA9</outgoing>
+         <outgoing>_D662FC43-3D6A-4B68-B639-78CCC9EE1757</outgoing>
+      </exclusiveGateway>
+      <scriptTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:selectable="true" id="_643E4624-B41E-4D3A-A95D-E402CC9CB9CA" isForCompensation="false" name="Decide Interest" scriptFormat="http://www.java.com/java" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Decide Interest</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_7353FF98-08ED-493A-AEC9-1A13FB921FA9</incoming>
+         <outgoing>_58867D3C-5B15-4028-91C0-799B21821F50</outgoing>
+      </scriptTask>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_17E99B6D-81EE-445F-8D92-C7D908663806" implementation="##unspecified" isForCompensation="false" name="Notify Customer of Interest, Score and Credit Limit" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Notify Customer of Interest, Score and Credit Limit</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_CB1E49F0-1796-4C6D-9A96-DBD63EB341E9</incoming>
+         <outgoing>_23F7AD19-8327-4DD5-B315-9FF7226077AE</outgoing>
+         <ioSpecification id="sid-e9911869-3a29-4a66-bde0-72d028bb958f">
+            <dataInput id="_17E99B6D-81EE-445F-8D92-C7D908663806_SkippableInputX" isCollection="false" itemSubjectRef="__17E99B6D-81EE-445F-8D92-C7D908663806_SkippableInputXItem" name="Skippable"/>
+            <inputSet id="_ScxfMh8_EeaPWuMkDzotbg">
+               <dataInputRefs>_17E99B6D-81EE-445F-8D92-C7D908663806_SkippableInputX</dataInputRefs>
+               <outputSetRefs>sid-33f187b2-5d7f-4035-a28d-d07b33cf47c0</outputSetRefs>
+            </inputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_ScxfNB8_EeaPWuMkDzotbg">
+            <targetRef>_17E99B6D-81EE-445F-8D92-C7D908663806_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_17E99B6D-81EE-445F-8D92-C7D908663806_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+      </userTask>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" drools:dg="" drools:selectable="true" gatewayDirection="Diverging" id="_CF435529-6603-49CA-B0D3-B548328973CA" name="Score &gt; 0?">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Score &gt; 0?</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_58867D3C-5B15-4028-91C0-799B21821F50</incoming>
+         <outgoing>_AB1432C2-EA4E-4BED-961B-7D071E604A00</outgoing>
+         <outgoing>_CB1E49F0-1796-4C6D-9A96-DBD63EB341E9</outgoing>
+      </exclusiveGateway>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_A56E61C4-2211-461D-A6BA-F4F3CB03528E" implementation="##unspecified" isForCompensation="false" name="Display Rejection" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Display Rejection</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_AB1432C2-EA4E-4BED-961B-7D071E604A00</incoming>
+         <outgoing>_BD1AD3A7-D5A8-4FD0-90F4-3702A22A2153</outgoing>
+         <ioSpecification id="sid-7876091b-af8a-4df9-a15d-4a1cb89f21ea">
+            <dataInput id="_A56E61C4-2211-461D-A6BA-F4F3CB03528E_SkippableInputX" isCollection="false" itemSubjectRef="__A56E61C4-2211-461D-A6BA-F4F3CB03528E_SkippableInputXItem" name="Skippable"/>
+            <inputSet id="_ScxfOR8_EeaPWuMkDzotbg">
+               <dataInputRefs>_A56E61C4-2211-461D-A6BA-F4F3CB03528E_SkippableInputX</dataInputRefs>
+               <outputSetRefs>sid-01e14897-2b53-4123-9d3d-cd141fdf9bff</outputSetRefs>
+            </inputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_ScxfOx8_EeaPWuMkDzotbg">
+            <targetRef>_A56E61C4-2211-461D-A6BA-F4F3CB03528E_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_A56E61C4-2211-461D-A6BA-F4F3CB03528E_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+      </userTask>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" drools:dg="" drools:selectable="true" gatewayDirection="Converging" id="_5374D78D-C43F-49BE-9A2C-E2ADCF2359DB" name="">
+         <incoming>_BD1AD3A7-D5A8-4FD0-90F4-3702A22A2153</incoming>
+         <incoming>_23F7AD19-8327-4DD5-B315-9FF7226077AE</incoming>
+         <outgoing>_2013A1D0-7A7D-4B66-A223-5DE3E6269029</outgoing>
+      </exclusiveGateway>
+      <endEvent color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_E2DEEFAA-93CE-4D1D-9B57-49BD142FDB74" name="Application  Closed">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Application 
+Closed</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_2013A1D0-7A7D-4B66-A223-5DE3E6269029</incoming>
+      </endEvent>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" drools:dg="" drools:selectable="true" gatewayDirection="Converging" id="_3A23BA23-F82A-4413-8F5D-8DD737E75278" name="">
+         <incoming>_D662FC43-3D6A-4B68-B639-78CCC9EE1757</incoming>
+         <incoming>_36BB1341-C966-4497-9999-8D6C8E85E917</incoming>
+         <outgoing>_12DCFC26-1FEF-4EC6-89AE-69849B868542</outgoing>
+      </exclusiveGateway>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_7353FF98-08ED-493A-AEC9-1A13FB921FA9" isImmediate="true" name="Approve" sourceRef="_967C1522-744C-400A-A998-9CA2386DAB02" targetRef="_643E4624-B41E-4D3A-A95D-E402CC9CB9CA">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Approve</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <conditionExpression id="sid-7ac62528-5e39-48ee-9942-8e147bf0db8a" xsi:type="tFormalExpression">return  KieFunctions.isTrue(valid);</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_3CE3F3E2-15B0-4DC7-8C66-7409E809ECF7" isImmediate="true" name="" sourceRef="_39635069-B383-44D2-B63F-C03F7DBBBAC9" targetRef="_967C1522-744C-400A-A998-9CA2386DAB02"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_58867D3C-5B15-4028-91C0-799B21821F50" isImmediate="true" name="" sourceRef="_643E4624-B41E-4D3A-A95D-E402CC9CB9CA" targetRef="_CF435529-6603-49CA-B0D3-B548328973CA"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_AB1432C2-EA4E-4BED-961B-7D071E604A00" isImmediate="true" name="" sourceRef="_CF435529-6603-49CA-B0D3-B548328973CA" targetRef="_A56E61C4-2211-461D-A6BA-F4F3CB03528E">
+         <conditionExpression id="sid-45ba57ed-982a-455f-a0a6-5225ff17ec7d" xsi:type="tFormalExpression">return  KieFunctions.lessOrEqualThan(score, "0");</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_BD1AD3A7-D5A8-4FD0-90F4-3702A22A2153" isImmediate="true" name="" sourceRef="_A56E61C4-2211-461D-A6BA-F4F3CB03528E" targetRef="_5374D78D-C43F-49BE-9A2C-E2ADCF2359DB"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_2013A1D0-7A7D-4B66-A223-5DE3E6269029" isImmediate="true" name="" sourceRef="_5374D78D-C43F-49BE-9A2C-E2ADCF2359DB" targetRef="_E2DEEFAA-93CE-4D1D-9B57-49BD142FDB74"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_D662FC43-3D6A-4B68-B639-78CCC9EE1757" isImmediate="true" name="" sourceRef="_967C1522-744C-400A-A998-9CA2386DAB02" targetRef="_3A23BA23-F82A-4413-8F5D-8DD737E75278">
+         <conditionExpression id="sid-1a52a3ef-91ec-4963-8c25-09fe28ac74fc" xsi:type="tFormalExpression">return  KieFunctions.isFalse(valid);</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_5A6638DF-EDCC-4333-9BFC-8673345980CB" isImmediate="true" name="" sourceRef="_493D9D99-3130-4AAC-9F59-CE84F01A454F" targetRef="_39635069-B383-44D2-B63F-C03F7DBBBAC9"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_23F7AD19-8327-4DD5-B315-9FF7226077AE" isImmediate="true" name="" sourceRef="_17E99B6D-81EE-445F-8D92-C7D908663806" targetRef="_5374D78D-C43F-49BE-9A2C-E2ADCF2359DB"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_CB1E49F0-1796-4C6D-9A96-DBD63EB341E9" isImmediate="true" name="" sourceRef="_CF435529-6603-49CA-B0D3-B548328973CA" targetRef="_17E99B6D-81EE-445F-8D92-C7D908663806">
+         <conditionExpression id="sid-349dfed2-9093-429c-a3c9-53ad7f7e982e" xsi:type="tFormalExpression">return  KieFunctions.greaterThan(score, "0");</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_36BB1341-C966-4497-9999-8D6C8E85E917" isImmediate="true" name="" sourceRef="_1260AF57-D8D4-4CCD-9F61-D75DD5D23EFB" targetRef="_3A23BA23-F82A-4413-8F5D-8DD737E75278"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_12DCFC26-1FEF-4EC6-89AE-69849B868542" isImmediate="true" name="" sourceRef="_3A23BA23-F82A-4413-8F5D-8DD737E75278" targetRef="_493D9D99-3130-4AAC-9F59-CE84F01A454F"/>
+   </process>
+   <bpmndi:BPMNDiagram id="sid-99e2ab95-40b8-4419-9e00-0f7bdc5b644c">
+      <bpmndi:BPMNPlane bpmnElement="sid-7da7689f-7b9a-4816-af4d-c1cdcd421d5b" id="sid-c6ccf05f-63c7-4fb2-9b51-c8e512d504ac">
+         <bpmndi:BPMNShape bpmnElement="_1260AF57-D8D4-4CCD-9F61-D75DD5D23EFB" id="_1260AF57-D8D4-4CCD-9F61-D75DD5D23EFB_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="15.0" y="355.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7d42adff-acfb-4a34-ab4f-68d865e82ac8">
+               <omgdc:Bounds height="11.0" width="100.4142837524414" x="-20.207141876220703" y="387.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_493D9D99-3130-4AAC-9F59-CE84F01A454F" id="_493D9D99-3130-4AAC-9F59-CE84F01A454F_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="195.0" y="330.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-277ebfb1-3233-4550-a4ea-3cc0e923315e">
+               <omgdc:Bounds height="24.0" width="87.94285583496094" x="201.02857208251953" y="356.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_39635069-B383-44D2-B63F-C03F7DBBBAC9" id="_39635069-B383-44D2-B63F-C03F7DBBBAC9_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="365.0" y="330.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-277ebfb1-3233-4550-a4ea-3cc0e923315e">
+               <omgdc:Bounds height="12.0" width="71.74285888671875" x="379.1285705566406" y="362.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_967C1522-744C-400A-A998-9CA2386DAB02" id="_967C1522-744C-400A-A998-9CA2386DAB02_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="535.0" y="350.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7d42adff-acfb-4a34-ab4f-68d865e82ac8">
+               <omgdc:Bounds height="12.0" width="54.77142333984375" x="565.5" y="380.5"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_643E4624-B41E-4D3A-A95D-E402CC9CB9CA" id="_643E4624-B41E-4D3A-A95D-E402CC9CB9CA_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="670.0" y="330.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-277ebfb1-3233-4550-a4ea-3cc0e923315e">
+               <omgdc:Bounds height="12.0" width="82.5428466796875" x="678.7285766601562" y="362.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_17E99B6D-81EE-445F-8D92-C7D908663806" id="_17E99B6D-81EE-445F-8D92-C7D908663806_gui">
+            <omgdc:Bounds height="80.0" width="148.0" x="975.0" y="330.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-277ebfb1-3233-4550-a4ea-3cc0e923315e">
+               <omgdc:Bounds height="36.0" width="105.68571472167969" x="996.1571426391602" y="350.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_CF435529-6603-49CA-B0D3-B548328973CA" id="_CF435529-6603-49CA-B0D3-B548328973CA_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="845.0" y="350.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7d42adff-acfb-4a34-ab4f-68d865e82ac8">
+               <omgdc:Bounds height="12.0" width="60.17143249511719" x="875.5" y="380.5"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_A56E61C4-2211-461D-A6BA-F4F3CB03528E" id="_A56E61C4-2211-461D-A6BA-F4F3CB03528E_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="815.0" y="480.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-277ebfb1-3233-4550-a4ea-3cc0e923315e">
+               <omgdc:Bounds height="24.0" width="50.142852783203125" x="839.9285736083984" y="506.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_5374D78D-C43F-49BE-9A2C-E2ADCF2359DB" id="_5374D78D-C43F-49BE-9A2C-E2ADCF2359DB_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="1213.0" y="350.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_E2DEEFAA-93CE-4D1D-9B57-49BD142FDB74" id="_E2DEEFAA-93CE-4D1D-9B57-49BD142FDB74_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="1327.0" y="355.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7d42adff-acfb-4a34-ab4f-68d865e82ac8">
+               <omgdc:Bounds height="11.0" width="94.05000305175781" x="1293.974998474121" y="385.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_3A23BA23-F82A-4413-8F5D-8DD737E75278" id="_3A23BA23-F82A-4413-8F5D-8DD737E75278_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="120.0" y="350.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="_7353FF98-08ED-493A-AEC9-1A13FB921FA9" id="_7353FF98-08ED-493A-AEC9-1A13FB921FA9_gui">
+            <omgdi:waypoint x="575.0" y="370.0"/>
+            <omgdi:waypoint x="670.0" y="370.0"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7d42adff-acfb-4a34-ab4f-68d865e82ac8">
+               <omgdc:Bounds height="12.0" width="45.5142822265625" x="582.5239868164062" y="350.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_3CE3F3E2-15B0-4DC7-8C66-7409E809ECF7" id="_3CE3F3E2-15B0-4DC7-8C66-7409E809ECF7_gui">
+            <omgdi:waypoint x="465.0" y="370.0"/>
+            <omgdi:waypoint x="535.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_58867D3C-5B15-4028-91C0-799B21821F50" id="_58867D3C-5B15-4028-91C0-799B21821F50_gui">
+            <omgdi:waypoint x="770.0" y="370.0"/>
+            <omgdi:waypoint x="845.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_AB1432C2-EA4E-4BED-961B-7D071E604A00" id="_AB1432C2-EA4E-4BED-961B-7D071E604A00_gui">
+            <omgdi:waypoint x="865.0" y="390.0"/>
+            <omgdi:waypoint x="865.0" y="480.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_BD1AD3A7-D5A8-4FD0-90F4-3702A22A2153" id="_BD1AD3A7-D5A8-4FD0-90F4-3702A22A2153_gui">
+            <omgdi:waypoint x="915.0" y="520.0"/>
+            <omgdi:waypoint x="1233.0" y="520.0"/>
+            <omgdi:waypoint x="1233.0" y="390.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_2013A1D0-7A7D-4B66-A223-5DE3E6269029" id="_2013A1D0-7A7D-4B66-A223-5DE3E6269029_gui">
+            <omgdi:waypoint x="1253.0" y="370.0"/>
+            <omgdi:waypoint x="1327.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_D662FC43-3D6A-4B68-B639-78CCC9EE1757" id="_D662FC43-3D6A-4B68-B639-78CCC9EE1757_gui">
+            <omgdi:waypoint x="555.0" y="350.0"/>
+            <omgdi:waypoint x="555.0" y="250.0"/>
+            <omgdi:waypoint x="141.0" y="250.0"/>
+            <omgdi:waypoint x="140.16666666666666" y="350.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_5A6638DF-EDCC-4333-9BFC-8673345980CB" id="_5A6638DF-EDCC-4333-9BFC-8673345980CB_gui">
+            <omgdi:waypoint x="295.0" y="370.0"/>
+            <omgdi:waypoint x="365.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_23F7AD19-8327-4DD5-B315-9FF7226077AE" id="_23F7AD19-8327-4DD5-B315-9FF7226077AE_gui">
+            <omgdi:waypoint x="1123.0" y="370.0"/>
+            <omgdi:waypoint x="1213.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_CB1E49F0-1796-4C6D-9A96-DBD63EB341E9" id="_CB1E49F0-1796-4C6D-9A96-DBD63EB341E9_gui">
+            <omgdi:waypoint x="885.0" y="370.0"/>
+            <omgdi:waypoint x="975.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_36BB1341-C966-4497-9999-8D6C8E85E917" id="_36BB1341-C966-4497-9999-8D6C8E85E917_gui">
+            <omgdi:waypoint x="45.0" y="370.0"/>
+            <omgdi:waypoint x="120.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_12DCFC26-1FEF-4EC6-89AE-69849B868542" id="_12DCFC26-1FEF-4EC6-89AE-69849B868542_gui">
+            <omgdi:waypoint x="160.0" y="370.0"/>
+            <omgdi:waypoint x="195.0" y="370.0"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+      <bpmndi:BPMNLabelStyle id="sid-7d42adff-acfb-4a34-ab4f-68d865e82ac8">
+         <omgdc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Arial" size="11.0"/>
+      </bpmndi:BPMNLabelStyle>
+      <bpmndi:BPMNLabelStyle id="sid-277ebfb1-3233-4550-a4ea-3cc0e923315e">
+         <omgdc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Arial" size="12.0"/>
+      </bpmndi:BPMNLabelStyle>
+   </bpmndi:BPMNDiagram>
+</definitions>
